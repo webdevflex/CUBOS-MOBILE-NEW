@@ -14,6 +14,9 @@
     text-decoration: none;
    
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     color: white;
     font-family: 'Nobel-Book', sans-serif;
@@ -21,6 +24,7 @@ body{
     overflow-x:hidden;
     min-width: 280px;
     background-color: black;
+   
 }
 h1,h2,h3,h4,h5,h6{
     margin: 0;
@@ -522,7 +526,7 @@ h3{
     margin-right: 20px;
     padding-top: 11px;
     font-family: 'nobel', sans-serif;
-    font-weight: 400;
+    font-weight: 100;
     font-size: 19px;
     font-family: 'Nobel-Book', sans-serif;
 }
@@ -544,7 +548,7 @@ h3{
     height: 21px;
     color: red;
     margin-left: 15px;
-    margin-top: 5px;
+    // margin-top: 5px;
     cursor: pointer;
 }
 .content-item-btn{
@@ -567,7 +571,7 @@ h3{
     position: relative;
     max-height: 0;
     overflow: hidden ;
-    transition: max-height 1s ease-in;
+    transition: max-height 0.7s ease-in;
     // top: -30px;
     top: -38px;
     // bottom: 6px;
@@ -596,6 +600,7 @@ h3{
     padding-top: 23px;
     // padding-left: 12px;
     padding-right: 10px;
+    font-weight: 300;
 }
 //прячем показываем точки в слайдере
 .gallery-dots-hiden{
@@ -683,6 +688,7 @@ h3{
     }
     .content-link{
         margin-bottom: 68px;
+       
     }
 }
 .img-line-height{
@@ -705,6 +711,8 @@ h3{
     display: inline-block;
     margin-bottom: 20px;
     padding-left: 30px;
+    font-family: var(--fYantramanav-font-family);
+    font-weight: 100;
     span{
         display: inline-block;
         
@@ -744,28 +752,30 @@ h3{
     }
 }
 .buy-text{
-    color: var(--white-color);
-    font-size: 12px;
+    color:#CFCFCF;
+    font-size: 14px;
     padding-left: 30px;
+    font-family: var(--fYantramanav-font-family);
     span{
         margin-left: 20px;
-        font-size: 20px;
+        font-size: 28px;
     }
 }
 .btn-text-buy{
     position: absolute;
-    left: 20px;
+    left: 16px;
     top: 23px;
-    font-size: 12px;
+    font-size: 18px;
     text-align: center;
    
     span{
         display: block;
-        font-size: 11px;
+        font-size: 12px;
+        font-weight: 100;
     }
     .span-buy{
         font-weight: bold;
-        font-size: 13px;
+        font-size: 18px;
         font-family: 'Helvetica-Bold', sans-serif;
     }
 }
@@ -871,15 +881,17 @@ margin: 0 auto;
     margin-left: 20px;
 }
 .news-item-title{
+    font-family: var(--fYantramanav-font-family);
     color: #191919;
-    font-size: 18px;
+    font-size: 22px;
     text-transform: uppercase;
     margin-bottom: 4px;
     
 
 }
 .news-item-subtitle{
-    font-size: 18px;
+    font-family: var(--fYantramanav-font-family);
+    font-size: 22px;
     text-transform: uppercase;
     color: #191919;
     margin-bottom: 10px;
@@ -890,6 +902,8 @@ margin: 0 auto;
     margin-bottom: 10px;
 }
 .news-item-text{
+    font-family: var(--fYantramanav-font-family);
+    font-weight: 300;
     color: #A2A2A2;
     line-height: 23px;
     margin-bottom: 30px;
@@ -898,6 +912,7 @@ margin: 0 auto;
     font-size: 15px;
 }
 .btn-news{
+    font-family: var(--fYantramanav-font-family);
     margin-bottom: 30px;
     color:#515D67;
     border: none;
@@ -914,7 +929,9 @@ margin: 0 auto;
         top: -80px;
     }
 }
-
+#page1{
+  
+}
 
 //section phoroGaleryy
 .container-photo{
@@ -938,6 +955,7 @@ background-color: #fff;
     font-weight: 400;
 }
 .photo-gallery-hechTag{
+    font-family: var(--fYantramanav-font-family);
     text-transform: uppercase;
     font-size: 16px;
     margin-bottom: 20px;
@@ -1040,13 +1058,13 @@ background-color: #fff;
 .news-drop{
     max-height: 0;
     overflow: hidden ;
-    transition: max-height 1s ease-in;
+    transition: max-height 0.5s ease-in;
     color: #464B4A;
 }
 .photo-gallery-hiden{
     // max-height: 0;
     // overflow: hidden ;
-    transition: max-height 2s ease-in;
+    transition: max-height 0.5s ease-in;
 }
 // ---------
 .hidenArrowDown{
@@ -1525,8 +1543,27 @@ background-color: #fff;
     transform: translate(-50%, -50%);
     cursor: pointer;
 }
+.btn-container-drop{
+    position: relative;
+    top: 20px;
+}
 
-
+.img-scroll {
+    position: absolute;
+    bottom: -10px;
+    animation: arrowDown 2s infinite;
+  }
+  @keyframes arrowDown {
+    0% {
+      bottom: -10px;
+    }
+    50% {
+      bottom: 0;
+    }
+    100% {
+      bottom: -10px;
+    }
+  }
 
 
 

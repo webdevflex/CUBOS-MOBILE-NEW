@@ -159,7 +159,7 @@ function appClose(){
         //при закрытии крутим к анкору
         $('html, body').animate({
           scrollTop: $(".ancor-content").offset().top  // класс объекта к которому приезжаем
-       }, 1200);
+       },0.1);
       }
       
     })
@@ -274,7 +274,7 @@ function openCloseNews(){
 
         $('html, body').animate({
                    scrollTop: $(item).offset().top  // класс объекта к которому приезжаем
-                 }, 1200);
+                 }, 0.1);
         }
         
       })
@@ -320,13 +320,13 @@ $(".photo-gallery").each(function () {
   hide.hide();
   more.click(function () {
       hide.slideToggle(1000);//cкорость анимации
-      let $btnText = $('.btn-photo-gallery');
+      // let $btnText1 = $('.btn-photo-gallery');
       //меняем текс кнопки
-      $btnText.text($btnText.text() == "HIDE MORE GALLERY" ? "VIEW MORE GALLERY" : "HIDE MORE GALLERY");
+      // $btnText1.text($btnText1.text() == "hide more gallery1" ? "view more video2" : "hide more gallery1");
 
       $('html, body').animate({
-        scrollTop: $(hide).offset().top  // класс объекта к которому приезжаем
-      }, 1200);
+        scrollTop: $('.test-drop').offset().top  // класс объекта к которому приезжаем
+      }, 1);
 
   });
 
@@ -352,6 +352,23 @@ $(".video-gallery-footer").each(function () {
 
 });
 
+
+//content hiden/open (section)
+$(".content-wrapper").each(function () {
+  let more = $(this).find(".content-link");
+  let hide = $(this).find(".content-wrapper-item-hiden");
+  hide.hide();
+  more.click(function () {
+      hide.slideToggle(1000);//cкорость анимации
+      
+      // let $btnText = $('.btn-video-gallery');
+      // //меняем текс кнопки
+      // $btnText.text($btnText.text() == "HIDE MORE GALLERY" ? "VIEW MORE GALLERY" : "HIDE MORE GALLERY");
+
+     
+  });
+
+});
 
 
 

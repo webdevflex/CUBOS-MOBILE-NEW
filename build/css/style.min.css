@@ -383,6 +383,10 @@ template {
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: white;
   font-family: 'Nobel-Book', sans-serif;
@@ -969,7 +973,7 @@ h3 {
   margin-right: 20px;
   padding-top: 11px;
   font-family: 'nobel', sans-serif;
-  font-weight: 400;
+  font-weight: 100;
   font-size: 19px;
   font-family: 'Nobel-Book', sans-serif;
 }
@@ -992,7 +996,6 @@ h3 {
   height: 21px;
   color: red;
   margin-left: 15px;
-  margin-top: 5px;
   cursor: pointer;
 }
 
@@ -1011,9 +1014,9 @@ h3 {
   position: relative;
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height 1s ease-in;
-  -o-transition: max-height 1s ease-in;
-  transition: max-height 1s ease-in;
+  -webkit-transition: max-height 0.7s ease-in;
+  -o-transition: max-height 0.7s ease-in;
+  transition: max-height 0.7s ease-in;
   top: -38px;
   color: black;
   z-index: 99;
@@ -1032,6 +1035,7 @@ h3 {
   font-size: 18px;
   padding-top: 23px;
   padding-right: 10px;
+  font-weight: 300;
 }
 
 .gallery-dots-hiden {
@@ -1162,6 +1166,8 @@ h3 {
   display: inline-block;
   margin-bottom: 20px;
   padding-left: 30px;
+  font-family: var(--fYantramanav-font-family);
+  font-weight: 100;
 }
 
 .content-link span {
@@ -1212,32 +1218,34 @@ h3 {
 }
 
 .buy-text {
-  color: var(--white-color);
-  font-size: 12px;
+  color: #CFCFCF;
+  font-size: 14px;
   padding-left: 30px;
+  font-family: var(--fYantramanav-font-family);
 }
 
 .buy-text span {
   margin-left: 20px;
-  font-size: 20px;
+  font-size: 28px;
 }
 
 .btn-text-buy {
   position: absolute;
-  left: 20px;
+  left: 16px;
   top: 23px;
-  font-size: 12px;
+  font-size: 18px;
   text-align: center;
 }
 
 .btn-text-buy span {
   display: block;
-  font-size: 11px;
+  font-size: 12px;
+  font-weight: 100;
 }
 
 .btn-text-buy .span-buy {
   font-weight: bold;
-  font-size: 13px;
+  font-size: 18px;
   font-family: 'Helvetica-Bold', sans-serif;
 }
 
@@ -1354,14 +1362,16 @@ h3 {
 }
 
 .news-item-title {
+  font-family: var(--fYantramanav-font-family);
   color: #191919;
-  font-size: 18px;
+  font-size: 22px;
   text-transform: uppercase;
   margin-bottom: 4px;
 }
 
 .news-item-subtitle {
-  font-size: 18px;
+  font-family: var(--fYantramanav-font-family);
+  font-size: 22px;
   text-transform: uppercase;
   color: #191919;
   margin-bottom: 10px;
@@ -1374,6 +1384,8 @@ h3 {
 }
 
 .news-item-text {
+  font-family: var(--fYantramanav-font-family);
+  font-weight: 300;
   color: #A2A2A2;
   line-height: 23px;
   margin-bottom: 30px;
@@ -1382,6 +1394,7 @@ h3 {
 }
 
 .btn-news {
+  font-family: var(--fYantramanav-font-family);
   margin-bottom: 30px;
   color: #515D67;
   border: none;
@@ -1426,6 +1439,7 @@ h3 {
 }
 
 .photo-gallery-hechTag {
+  font-family: var(--fYantramanav-font-family);
   text-transform: uppercase;
   font-size: 16px;
   margin-bottom: 20px;
@@ -1542,16 +1556,16 @@ h3 {
 .news-drop {
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height 1s ease-in;
-  -o-transition: max-height 1s ease-in;
-  transition: max-height 1s ease-in;
+  -webkit-transition: max-height 0.5s ease-in;
+  -o-transition: max-height 0.5s ease-in;
+  transition: max-height 0.5s ease-in;
   color: #464B4A;
 }
 
 .photo-gallery-hiden {
-  -webkit-transition: max-height 2s ease-in;
-  -o-transition: max-height 2s ease-in;
-  transition: max-height 2s ease-in;
+  -webkit-transition: max-height 0.5s ease-in;
+  -o-transition: max-height 0.5s ease-in;
+  transition: max-height 0.5s ease-in;
 }
 
 .hidenArrowDown {
@@ -2093,6 +2107,42 @@ h3 {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   cursor: pointer;
+}
+
+.btn-container-drop {
+  position: relative;
+  top: 20px;
+}
+
+.img-scroll {
+  position: absolute;
+  bottom: -10px;
+  -webkit-animation: arrowDown 2s infinite;
+          animation: arrowDown 2s infinite;
+}
+
+@-webkit-keyframes arrowDown {
+  0% {
+    bottom: -10px;
+  }
+  50% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -10px;
+  }
+}
+
+@keyframes arrowDown {
+  0% {
+    bottom: -10px;
+  }
+  50% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -10px;
+  }
 }
 
 @media (min-width: 270px) {
