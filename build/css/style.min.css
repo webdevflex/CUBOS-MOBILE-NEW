@@ -383,10 +383,6 @@ template {
   text-decoration: none;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   color: white;
   font-family: 'Nobel-Book', sans-serif;
@@ -1291,7 +1287,7 @@ h3 {
 
 .hide-gallery-item {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .popup-video {
@@ -1452,6 +1448,10 @@ h3 {
 
 .video-gallery-footer .hide-gallery-item {
   margin-bottom: 20px;
+}
+
+.video-gallery-footer .hide-gallery {
+  padding-top: 0;
 }
 
 .contact {

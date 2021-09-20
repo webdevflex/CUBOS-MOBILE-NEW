@@ -159,7 +159,7 @@ function appClose(){
         //при закрытии крутим к анкору
         $('html, body').animate({
           scrollTop: $(".ancor-content").offset().top  // класс объекта к которому приезжаем
-       },0.1);
+       },1000);
       }
       
     })
@@ -274,7 +274,7 @@ function openCloseNews(){
 
         $('html, body').animate({
                    scrollTop: $(item).offset().top  // класс объекта к которому приезжаем
-                 }, 0.1);
+                 }, 1000);
         }
         
       })
@@ -325,8 +325,8 @@ $(".photo-gallery").each(function () {
       $btnText1.text($btnText1.text() == "hide more gallery" ? "view more gallery" : "hide more gallery");
 
       $('html, body').animate({
-        scrollTop: $('.test-drop').offset().top  // класс объекта к которому приезжаем
-      }, 1);
+        scrollTop: $(hide1).offset().top  // класс объекта к которому приезжаем
+      }, 1200);
 
   });
 
@@ -368,6 +368,22 @@ $(".content-wrapper").each(function () {
      
   });
 
+});
+
+//menu jakar
+
+$('.menu-list a').on('click', function() {
+
+  let href = $(this).attr('href');
+
+  $('html, body').animate({
+      scrollTop: $(href).offset().top
+  }, {
+      duration: 1000,   // по умолчанию «400» 
+      easing: "linear" // по умолчанию «swing» 
+  });
+
+  return false;
 });
 
 

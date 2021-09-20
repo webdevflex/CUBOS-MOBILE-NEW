@@ -14,9 +14,9 @@
     text-decoration: none;
    
 }
-html{
-    scroll-behavior: smooth;
-}
+// html{
+//     scroll-behavior: smooth;
+// }
 body{
     color: white;
     font-family: 'Nobel-Book', sans-serif;
@@ -816,7 +816,7 @@ h3{
 }
 .hide-gallery-item{
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 
  
 }
@@ -969,6 +969,9 @@ background-color: #fff;
 .video-gallery-footer{
     .hide-gallery-item{
         margin-bottom: 20px;
+    }
+    .hide-gallery{
+        padding-top: 0;
     }
 }
 
