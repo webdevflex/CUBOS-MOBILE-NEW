@@ -268,10 +268,14 @@ function openCloseNews(){
 
         }
         //проверяем высоту у контейнера , в зависимости от этого 'показываем/скрываем',блок
-        // let insideElHeight3 = item.scrollHeight;
-        // if (getComputedStyle(item).maxHeight == insideElHeight3 +'px') {
-        // item.style.maxHeight = '0px'
-        // }
+        let insideElHeight3 = item.scrollHeight;
+        if (getComputedStyle(item).maxHeight == insideElHeight3 +'px') {
+        item.style.maxHeight = '0px';
+
+        $('html, body').animate({
+                   scrollTop: $(item).offset().top  // класс объекта к которому приезжаем
+                 }, 1200);
+        }
         
       })
     }
@@ -286,28 +290,9 @@ function openCloseNews(){
   }
   openCloseNews();
 
-//photo-gallery hiden/open
-
-// //находим кнопку
-// let hideOpenBtn = document.querySelector('.btn-photo-gallery');
-// //находим "галерею"
-// let galleryHidePhoto = document.querySelector('.photo-gallery-hiden')
-// // let galleryActive = document.querySelector('.gallary-active')
-// //при клике на кнопку узнаем высоту контейнера и "и задаем ее при клике"
-
-// hideOpenBtn.addEventListener('click',function(){
-//   let insideElHeight = galleryHidePhoto.scrollHeight;
-//   galleryHidePhoto.style.maxHeight = insideElHeight +'px'
-
-// //проверяем высоту у контейнера , в зависимости от этого 'показываем/скрываем',блок
-// let insideElHeight2 = galleryHidePhoto.scrollHeight;
-// if (getComputedStyle(galleryHidePhoto).maxHeight == insideElHeight2 +'px') {
-//   galleryHidePhoto.style.maxHeight = '0px'
-// }
-// });
 
 
-
+//photo-gallery hiden/open (header)
 $(".video-gallery-wrapper").each(function () {
   let more = $(this).find(".gallery-btn");
   let hide = $(this).find(".hide-gallery");
@@ -326,6 +311,47 @@ $(".video-gallery-wrapper").each(function () {
   });
 
 });
+
+
+//photo-gallery hiden/open (footer)
+$(".photo-gallery").each(function () {
+  let more = $(this).find(".btn-photo-gallery");
+  let hide = $(this).find(".photo-gallery-hiden");
+  hide.hide();
+  more.click(function () {
+      hide.slideToggle(1000);//cкорость анимации
+      let $btnText = $('.btn-photo-gallery');
+      //меняем текс кнопки
+      $btnText.text($btnText.text() == "HIDE MORE GALLERY" ? "VIEW MORE GALLERY" : "HIDE MORE GALLERY");
+
+      $('html, body').animate({
+        scrollTop: $(hide).offset().top  // класс объекта к которому приезжаем
+      }, 1200);
+
+  });
+
+});
+
+//video-gallery hiden/open (footer)
+$(".video-gallery-footer").each(function () {
+  let more2 = $(this).find(".btn-video-gallery");
+  let hide2 = $(this).find(".hide-gallery-footer");
+  hide2.hide();
+  more2.click(function () {
+      hide2.slideToggle(1000);//cкорость анимации
+      
+      let $btnText = $('.btn-video-gallery');
+      //меняем текс кнопки
+      $btnText.text($btnText.text() == "HIDE MORE GALLERY" ? "VIEW MORE GALLERY" : "HIDE MORE GALLERY");
+
+      $('html, body').animate({
+        scrollTop: $(hide2).offset().top  // класс объекта к которому приезжаем
+      }, 1200);
+
+  });
+
+});
+
 
 
 

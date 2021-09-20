@@ -573,12 +573,15 @@ h3{
     // bottom: 6px;
     color: black;
     z-index: 99;
+
+    padding-left: 15px;
+    padding-right: 15px;
    
 }
 
 .content-drop-item{
-    padding-left: 15px;
-    padding-right: 15px;
+    // padding-left: 15px;
+    // padding-right: 15px;
     // padding-bottom: 1px;
 }
 .content-img{
@@ -591,7 +594,7 @@ h3{
     line-height: 24px;
     font-size: 18px;
     padding-top: 23px;
-    padding-left: 12px;
+    // padding-left: 12px;
     padding-right: 10px;
 }
 //прячем показываем точки в слайдере
@@ -850,7 +853,6 @@ margin: 0 auto;
 }
 .title-news{
     color: #151515;
-    padding-left: 10px;
     margin-bottom: 40px;
     padding-top: 40px;
     font-weight: 400;
@@ -872,7 +874,6 @@ margin: 0 auto;
     color: #191919;
     font-size: 18px;
     text-transform: uppercase;
-    padding-left: 10px;
     margin-bottom: 4px;
     
 
@@ -882,19 +883,17 @@ margin: 0 auto;
     text-transform: uppercase;
     color: #191919;
     margin-bottom: 10px;
-    padding-left: 10px;
 }
 .news-item-date{
     color: #AEAEAE;
     font-size: 12px;
     margin-bottom: 10px;
-    padding-left: 10px;
 }
 .news-item-text{
     color: #A2A2A2;
     line-height: 23px;
     margin-bottom: 30px;
-    padding-left: 10px;
+    // padding-left: 10px;
     padding-right: 15px;
     font-size: 15px;
 }
@@ -923,7 +922,7 @@ padding-left: 15px;
 padding-right: 15px;
 background-color: #fff;
 }
-.photo-gallery{
+.photo-gallery, .video-gallery-footer{
    color: black;
 }
 .photo-gallery-img{
@@ -933,14 +932,12 @@ background-color: #fff;
     border: 1px solid #CCCFCD;
 }
 .photo-gallery-title{
-    padding-left: 30px;
     font-size: 25px;
     text-transform: uppercase;
     margin-bottom: 10px;
     font-weight: 400;
 }
 .photo-gallery-hechTag{
-    padding-left: 30px;
     text-transform: uppercase;
     font-size: 16px;
     margin-bottom: 20px;
@@ -951,7 +948,11 @@ background-color: #fff;
     padding-bottom: 14px;
 }
 
-
+.video-gallery-footer{
+    .hide-gallery-item{
+        margin-bottom: 20px;
+    }
+}
 
 //footer- contact
 .contact{
@@ -1043,8 +1044,8 @@ background-color: #fff;
     color: #464B4A;
 }
 .photo-gallery-hiden{
-    max-height: 0;
-    overflow: hidden ;
+    // max-height: 0;
+    // overflow: hidden ;
     transition: max-height 2s ease-in;
 }
 // ---------
@@ -1061,8 +1062,17 @@ background-color: #fff;
 .video-kaljan-demo{
     width: 170%;  
 }
-.myCarousel{
-  
+#myCarousel{
+  .carousel__button{
+      width: 60px;
+      height: 60px;
+  }
+  .carousel__button.is-next{
+      right: -10px;
+  }
+  .carousel__button.is-prev {
+    left: -10px;
+}
 }
 .transition-right-drop{
     position: relative;
@@ -1106,12 +1116,16 @@ background-color: #fff;
     height: 30px;
     background-color:transparent;
 }
-.carousel__button.is-prev{
-    left: 0;
+.fancybox__nav .carousel__button.is-next{
+    right: 0
 }
-.carousel__button.is-next{
-    right: 0;
+.fancybox__nav .carousel__button.is-prev{
+    left: 0
 }
+
+// .carousel__button.is-next{
+//     right: 0!important;
+// }
 .popup-wrapper{
     // position: relative;
     padding-left: 15px;
@@ -1139,6 +1153,7 @@ background-color: #fff;
     position: relative;
     .block-transition-right-bottom{
         top: -40px;
+        position: absolute;
     }
 }
 .dots-hiden{
@@ -1147,6 +1162,7 @@ background-color: #fff;
 .content-mobile{
     .block-transition-right-bottom{
         // top: 113px;
+        position: absolute;
     }
 }
 //payment-mobile.html
@@ -1555,6 +1571,7 @@ background-color: #fff;
 @media(min-width:370px){
     .block-transition-right-bottom{
         top:initial;
+        position: absolute;
     }
 }
 
