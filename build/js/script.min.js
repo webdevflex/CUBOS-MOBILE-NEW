@@ -292,7 +292,7 @@ function openCloseNews(){
 
 
 
-//photo-gallery hiden/open (header)
+//video-gallery hiden/open (header)
 $(".video-gallery-wrapper").each(function () {
   let more = $(this).find(".gallery-btn");
   let hide = $(this).find(".hide-gallery");
@@ -315,14 +315,14 @@ $(".video-gallery-wrapper").each(function () {
 
 //photo-gallery hiden/open (footer)
 $(".photo-gallery").each(function () {
-  let more = $(this).find(".btn-photo-gallery");
-  let hide = $(this).find(".photo-gallery-hiden");
-  hide.hide();
-  more.click(function () {
-      hide.slideToggle(1000);//cкорость анимации
-      // let $btnText1 = $('.btn-photo-gallery');
+  let more1 = $(this).find(".btn-photo-gallery");
+  let hide1 = $(this).find(".photo-gallery-hiden");
+  hide1.hide();
+  more1.click(function () {
+      hide1.slideToggle(1000);//cкорость анимации
+      let $btnText1 = $('.btn-photo-gallery');
       //меняем текс кнопки
-      // $btnText1.text($btnText1.text() == "hide more gallery1" ? "view more video2" : "hide more gallery1");
+      $btnText1.text($btnText1.text() == "hide more gallery" ? "view more gallery" : "hide more gallery");
 
       $('html, body').animate({
         scrollTop: $('.test-drop').offset().top  // класс объекта к которому приезжаем
@@ -340,9 +340,9 @@ $(".video-gallery-footer").each(function () {
   more2.click(function () {
       hide2.slideToggle(1000);//cкорость анимации
       
-      let $btnText = $('.btn-video-gallery');
+      let $btnText2 = $('.btn-video-gallery');
       //меняем текс кнопки
-      $btnText.text($btnText.text() == "HIDE MORE GALLERY" ? "VIEW MORE GALLERY" : "HIDE MORE GALLERY");
+      $btnText2.text($btnText2.text() == "hide more gallery" ? "view more gallery" : "hide more gallery");
 
       $('html, body').animate({
         scrollTop: $(hide2).offset().top  // класс объекта к которому приезжаем
@@ -361,9 +361,9 @@ $(".content-wrapper").each(function () {
   more.click(function () {
       hide.slideToggle(1000);//cкорость анимации
       
-      // let $btnText = $('.btn-video-gallery');
-      // //меняем текс кнопки
-      // $btnText.text($btnText.text() == "HIDE MORE GALLERY" ? "VIEW MORE GALLERY" : "HIDE MORE GALLERY");
+      let $btnText = $('.btn-video-gallery');
+      //меняем текс кнопки
+      $btnText.text($btnText.text() == "hide more gallery" ? "view more gallery" : "hide more gallery");
 
      
   });

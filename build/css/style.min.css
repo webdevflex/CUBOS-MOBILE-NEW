@@ -1572,6 +1572,14 @@ h3 {
   opacity: 0;
 }
 
+.btn-photo-gallery {
+  text-transform: uppercase;
+}
+
+.btn-video-gallery {
+  text-transform: uppercase;
+}
+
 .kaljan-size {
   overflow: hidden;
   display: -webkit-box;
