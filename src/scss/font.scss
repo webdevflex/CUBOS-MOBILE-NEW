@@ -1,23 +1,32 @@
 @font-face {
-    font-family: 'Nobel-Book', sans-serif;
+    font-family: 'Nobel-Book';
 	src:url('../fonts/Nobel-Book.woff2') format('woff2'); /* Super Modern Browsers */
 		
 }
 
 @font-face {
-    font-family: 'dameron', sans-serif;
+    font-family:'dameron';
 	src:url('../fonts/dameron.woff2') format('woff2'); /* Super Modern Browsers */
-		
+    font-weight: 600;
 }
 
 
 @font-face {
-    font-family: 'nobel', sans-serif;
+    font-family: 'nobel';
 	src:url('../fonts/nobel-new22.woff2') format('woff2'); /* Super Modern Browsers */
 		
 }
 @font-face {
-    font-family: 'Helvetica-Bold', sans-serif;
+    font-family: 'Helvetica-Bold';
 	src:url('../fonts/Helvetica-Bold.woff2') format('woff2'); /* Super Modern Browsers */
 		
+}
+@font-face {
+    font-family: 'HelveticaLight';
+	src:url('../fonts/HelveticaLight.woff') format('woff'); /* Super Modern Browsers */
+		
+}
+@font-face {
+    font-family:'NobelB';
+	src:url('../fonts/Nobel-Book-test.woff2') format('woff2'); /* Super Modern Browsers */
 }
